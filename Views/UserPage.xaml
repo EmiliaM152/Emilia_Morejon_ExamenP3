@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Emilia_Morejon_ExamenP3.Views.UserPage"
+             Title="UserPage">
+    <VerticalStackLayout>
+        <ListView x:Name="usersListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding id}" />
+                        <Label Text="{Binding email}" />
+                        <Label Text="{Binding first_name}" />
+                        <Label Text="{Binding last_name}" />
+                     
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Text="Generar"
+            Clicked="llamarAPI"
+            />
+    </VerticalStackLayout>
+</ContentPage>
